@@ -56,7 +56,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#eceae4] dark:bg-[#111113] text-[#1c1c1e] dark:text-[#f7f6f2] transition-colors duration-200">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col min-h-screen justify-between">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
         {/* Top Navigation Header */}
         <Header
           currentPage={currentPage}
@@ -67,7 +67,7 @@ export default function App() {
 
         {/* Main Page View with Smooth Opacity/Transform Transition */}
         <main
-          className={`flex-1 transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          className={`mb-12 sm:mb-16 transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] ${
             isTransitioning ? 'opacity-0 translate-y-1.5' : 'opacity-100'
           }`}
         >
