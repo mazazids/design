@@ -67,7 +67,7 @@ export default function App() {
 
         {/* Main Page View with Smooth Opacity/Transform Transition */}
         <main
-          className={`mb-12 sm:mb-16 transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          className={`transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] ${
             isTransitioning ? 'opacity-0 translate-y-1.5' : 'opacity-100'
           }`}
         >
