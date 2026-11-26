@@ -10,6 +10,17 @@ export default defineConfig(() => {
     plugins: [
       react(),
       tailwindcss(),
+      {
+        name: 'fix-aistudio-asset-paths',
+        apply: 'build',
+        transform(code: string) {
+          if (code.includes('/assets/aistudio/')) {
+            return code
+              .replaceAll('"/assets/aistudio/', '"/design/assets/aistudio/')
+              .replaceAll("'/assets/aistudio/", "'/design/assets/aistudio/");
+          }
+        },
+      },
       // Copies src/assets into dist/ so root-relative URLs like
       // "/src/assets/images/..." (e.g. generate_image output) still resolve
       // in production builds. Do not remove.
