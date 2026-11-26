@@ -87,6 +87,13 @@
   );
 }
 
+/* Proportionally scale the entire UI on large 2K / 4K monitors */
+@media (min-width: 1680px) {
+  html {
+    font-size: clamp(16px, 0.95vw, 28px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
